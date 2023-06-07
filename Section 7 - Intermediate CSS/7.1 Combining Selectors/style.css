@@ -1,0 +1,32 @@
+/* Write your code here: */
+
+/* Grouping (selectors seperated by commas) apply rules
+to all elements that any listed selector applies to */
+h1, h2 {
+    color: blueviolet;
+}
+
+/* Child combined selectors (using the > symbol) applies the
+rule to the direct (no grandchildren) child of the left side */
+.box > p {
+     color: firebrick;
+}
+
+/* Descendant ombined selectors (selectors seperated by a space)
+apply rules to any depth descendent of the left side that the right
+side selector would apply to */
+.box li{
+    color: blue;
+}
+
+/* Chaining selectors (selectors with no spaces between) apply rules
+to elements where all selectors listed apply */
+li.done{
+    color: seagreen;
+}
+
+/* Combining combiners applies according to the previous rules
+but allows for substitution of selectors with combiners */
+ul p.done{
+    font-size: .5rem
+}

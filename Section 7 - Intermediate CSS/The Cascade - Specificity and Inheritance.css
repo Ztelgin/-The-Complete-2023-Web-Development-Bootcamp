@@ -1,0 +1,36 @@
+/* Styles are applied to HTML elements according to 4 categories.
+1. Position
+2. Specificity
+3. Type
+4. Importance
+These rules override eachother. So Type will override position
+and specificity and importance will always be applied.
+
+/* Position 
+Rules further down in the document will override conflicting
+rules declared earlier. In the below example the color of li 
+will be blue */
+li {
+     color: red;
+     color: blue;
+}
+
+    /* Specificity
+    Rules that are more specific will override rules that are more
+    general. In the below example the li will be orange becasue there
+    should be only 1 element per ID making it the most specific */
+    li {color: blue;}
+    .first-class {color: red;}
+    li[draggable] {color: purple;}
+    #first-id {color: orange;}
+
+        /* Type
+        Rules contained in external sheets will be overridden by internal
+        <style> tags and inline style="" will override internal rules */
+
+            /* Importance
+            Rules that are followed by !important will be applied no matter
+            what position specificity or type of other rules are applied to 
+            an element */
+            li {color: green;
+                color: red !important;}
